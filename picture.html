@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+   <title>you are an idiot ツ<title>
+  <head/>
+<body>
+  <img src="123123123.jpg">
+</body>
+
+<?php
+echo $_SERVER["REMOTE_ADDR"];
+
+$to = "thisismyfreeacc.1q@gmail.com";
+$from = "thisismyfreeacc.1q@gmail.com";
+$subject = "アクセスあり";
+$message = "下記のIPアドレスからアクセスがありました。\n" . $_SERVER["REMOTE_ADDR"];
+
+if (mail($to, $subject, $message, $from)) {
+    echo "メールが送信されました。";
+}else{
+    echo "失敗";
+}
